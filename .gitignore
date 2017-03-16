@@ -12,7 +12,15 @@ Builds/
 # ========= #
 # Big Files #
 # ========= #
+# Put Big Files Here #
 StreamingAssets/
+# Arthur Tubb's Working Files live here,  don't sync this! #
+Work/
+
+# Builds Folder and any rogue build files
+Builds/
+# any stray build files should get cleaned up by this but for some reason it's not working properly.
+*.apk
  
 # ===================================== #
 # Visual Studio / MonoDevelop generated #

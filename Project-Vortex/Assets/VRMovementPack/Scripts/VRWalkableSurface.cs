@@ -11,10 +11,10 @@ public class VRWalkableSurface : MonoBehaviour {
     private EventTrigger myTrigger;
     
     // NavMesh agent, should be on VR Player, gameobject with tag "Player"
-    private NavMeshAgent navmeshAgent;
+    private UnityEngine.AI.NavMeshAgent navmeshAgent;
 
     // NavMesh hit, similar to raycast hit
-    private NavMeshHit navmeshHit;
+    private UnityEngine.AI.NavMeshHit navmeshHit;
     
     // If the path is blocked
     private bool blocked = false;
@@ -24,7 +24,7 @@ public class VRWalkableSurface : MonoBehaviour {
         // Find VRMain by Player Tag
         player = GameObject.FindGameObjectWithTag("Player");
         // Find NavMesh Agent on Player
-        navmeshAgent = player.GetComponent<NavMeshAgent>();
+        navmeshAgent = player.GetComponent<UnityEngine.AI.NavMeshAgent>();
 
         // Try to Find an EventTrigger Script on this GameObject
         myTrigger = gameObject.GetComponent<EventTrigger>();
@@ -88,7 +88,7 @@ public class VRWalkableSurface : MonoBehaviour {
         // RAY HAS A MAX DISTANCE OF 100! (Should automatically match reticle max distance)
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 100f)) {
             // Check to see if the path is blocked
-            blocked = NavMesh.Raycast(navmeshAgent.gameObject.transform.position, hit.point, out navmeshHit, NavMesh.AllAreas);
+            blocked = UnityEngine.AI.NavMesh.Raycast(navmeshAgent.gameObject.transform.position, hit.point, out navmeshHit, UnityEngine.AI.NavMesh.AllAreas);
             // Draw a line in the editor, green if not blocked, red if blocked
             Debug.DrawLine(navmeshAgent.gameObject.transform.position, hit.point, blocked ? Color.red : Color.green, 10f);
             // The path is blocked

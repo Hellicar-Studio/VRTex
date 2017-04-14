@@ -19,6 +19,6 @@ public class AudioEmitter : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         ParticleSystem.EmissionModule emission = particleSystem.emission;
-        emission.rate = input.MicLoudness/3;
+        emission.rateOverTime = input.MicLoudness/3;
     }
 }

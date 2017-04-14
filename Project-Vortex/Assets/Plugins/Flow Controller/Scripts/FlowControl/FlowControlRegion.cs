@@ -210,6 +210,9 @@ namespace com.kupio.FlowControl
         public bool ShowTestPoints = true;
 
         [SerializeField]
+        public float SpeedFactor;
+
+        [SerializeField]
         private Vector3[] m_field; /* This should be a multidimensional array, but Unity doesn't serialize those. Sigh. */
         private Color[] m_colours;
 
@@ -493,7 +496,7 @@ namespace com.kupio.FlowControl
         
             int idx = iz + m_resolution * (iy + m_resolution * ix);
 
-            return m_field[idx];
+            return m_field[idx]*SpeedFactor;
         }
     }
 }

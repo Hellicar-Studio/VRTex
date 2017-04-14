@@ -11,12 +11,13 @@ public enum Frequency
     CD = 44100,
     Pro = 48000,
     DVD = 96000
-
 }
+
 public class AudioInput : MonoBehaviour
 {
 
     public float MicLoudness;
+    public bool Active;
 
     public Frequency samplingRate = Frequency.Wideband;
     public int lengthSeconds = 1;
@@ -26,7 +27,8 @@ public class AudioInput : MonoBehaviour
     //mic initialization
     void InitMic()
     {
-        if (_device == null) _device = Microphone.devices[0];
+        if (_device == null && Microphone.devices.Length > 0)
+            _device = Microphone.devices[0];
         _clipRecord = Microphone.Start(_device, true, lengthSeconds, (int)samplingRate);
     }
 
@@ -72,7 +74,10 @@ public class AudioInput : MonoBehaviour
 
         // if muted, just switch variable to zero, don't actually disable hardware as Unity update was
         // having probs with stop and starting mics
-        MicLoudness = LevelMax() * 1000f;
+        if(Active)
+        {
+            MicLoudness = LevelMax() * 1000f;
+        }
     }
 
     bool _isInitialized;

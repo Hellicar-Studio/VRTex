@@ -6,4 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Vortex/Vortex-Menu_01.unity
+  - enabled: 1
     path: Assets/Vortex/Vortex_01.unity
+  - enabled: 1
+    path: Assets/Vortex/Vortex-Outro_01.unity

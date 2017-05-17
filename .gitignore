@@ -20,6 +20,16 @@ Work/
 #also ignore the audio file!
 Audio/
 
+#and several big VR files
+VRSampleScenes/
+VRStandardAssets/
+VRMovementPack/
+Standard\ Assets/
+
+#I made a unity version 5.5 backup which I also want to ignore
+Project-Vortex5.5/
+
+
 # Builds Folder and any rogue build files
 Builds/
 # any stray build files should get cleaned up by this but for some reason it's not working properly.

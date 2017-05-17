@@ -29,6 +29,11 @@ Standard\ Assets/
 #I made a unity version 5.5 backup which I also want to ignore
 Project-Vortex5.5/
 
+#ignore the PUN files
+Photon\ Unity\ Networking/
+PhotonChatAPI/
+Plugins/
+
 
 # Builds Folder and any rogue build files
 Builds/

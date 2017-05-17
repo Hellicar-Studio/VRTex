@@ -7,6 +7,7 @@ public class AudioEmitter : MonoBehaviour {
 
     public AudioInput input;
     public ParticleSystem particleSystem;
+    public float loudness;
 	// Use this for initialization
 	void Start () {
         // Setup the particle system and audioInput if they aren't already assigned
@@ -19,6 +20,7 @@ public class AudioEmitter : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         ParticleSystem.EmissionModule emission = particleSystem.emission;
-        emission.rateOverTime = input.MicLoudness/3;
+        loudness = input.MicLoudness / 3;
+        emission.rateOverTime = loudness;
     }
 }

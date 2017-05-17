@@ -340,6 +340,8 @@
     <Compile Include="Assets\Vortex\Scripts\FlowRegionYController.cs" />
     <Compile Include="Assets\Vortex\Scripts\GameController.cs" />
     <Compile Include="Assets\Vortex\Scripts\LightingController.cs" />
+    <Compile Include="Assets\Vortex\Scripts\NetworkController.cs" />
+    <Compile Include="Assets\Vortex\Scripts\NetworkedPlayer.cs" />
     <Compile Include="Assets\Vortex\Scripts\RandomEmitter.cs" />
     <Compile Include="Assets\Vortex\Scripts\ValueSetter.cs" />
   </ItemGroup>

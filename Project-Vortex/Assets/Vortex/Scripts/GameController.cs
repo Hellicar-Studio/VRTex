@@ -52,7 +52,7 @@ public class GameController : MonoBehaviour {
         }
         if (percentage > 120)
         {
-            SceneManager.LoadScene("Vortex-Outro_01", LoadSceneMode.Single);
+            //SceneManager.LoadScene("Vortex-Outro_01", LoadSceneMode.Single);
         //    //end!
         //    percentage = 0.1f;
         }

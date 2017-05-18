@@ -9,6 +9,8 @@ public class NetworkedPlayer : Photon.MonoBehaviour {
     public AudioEmitter emitter;
     public Transform playerGlobal;
     public Transform playerLocal;
+    public float lerpSpeed;
+    public string colorName;
 
 	// Use this for initialization
 	void Start () {
@@ -18,7 +20,7 @@ public class NetworkedPlayer : Photon.MonoBehaviour {
         {
             Debug.Log("Player is Mine");
             playerGlobal = this.transform;
-            playerLocal = GameObject.Find("OVRCameraRig/TrackingSpace/CenterEyeAnchor").transform;
+            playerLocal = GameObject.Find("OVRCameraRig" + colorName + "/TrackingSpace/CenterEyeAnchor").transform;
 
             this.transform.SetParent(playerLocal);
 
@@ -28,6 +30,7 @@ public class NetworkedPlayer : Photon.MonoBehaviour {
             avatar.SetActive(false);
         } else
         {
+            Debug.Log("Player is not Mine!");
             emitter = GetComponentInChildren<AudioEmitter>();
             emitter.networked = true;
         }
@@ -42,20 +45,20 @@ public class NetworkedPlayer : Photon.MonoBehaviour {
         if(stream.isWriting)
         {
             Vector3 pos = playerGlobal.position;
-            Debug.Log("Sending Global Position: " + pos);
+            //Debug.Log("Sending Global Position: " + pos);
             stream.SendNext(pos);
             Quaternion rot = playerGlobal.rotation;
-            Debug.Log("Sending Global Rotation: " + rot);
+            //Debug.Log("Sending Global Rotation: " + rot);
             stream.SendNext(rot);
             stream.SendNext(emitter.loudness);
         } else
         {
             Vector3 pos = (Vector3)stream.ReceiveNext();
-            Debug.Log("Recieving Global Position: " + pos);
-            this.transform.position = Vector3.Lerp(transform.position, pos, 0.1f);
+            //Debug.Log("Recieving Global Position: " + pos);
+            this.transform.position = Vector3.Lerp(transform.position, pos, lerpSpeed);
             Quaternion rot = (Quaternion)stream.ReceiveNext();
-            Debug.Log("Recieving Global Rotation: " + rot);
-            this.transform.rotation = Quaternion.Lerp(transform.rotation, rot, 0.1f); ;
+            //Debug.Log("Recieving Global Rotation: " + rot);
+            this.transform.rotation = Quaternion.Lerp(transform.rotation, rot, lerpSpeed); ;
             emitter.setLoudness((float)stream.ReceiveNext());
         }
     }

@@ -261,7 +261,7 @@ MonoBehaviour:
   emitter: {fileID: 114445470545226428}
   playerGlobal: {fileID: 0}
   playerLocal: {fileID: 0}
-  lerpSpeed: 0.5
+  lerpSpeed: 0.1
   colorName: Blue
 --- !u!198 &198433989560034788
 ParticleSystem:

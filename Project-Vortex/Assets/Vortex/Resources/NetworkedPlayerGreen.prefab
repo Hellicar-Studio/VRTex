@@ -247,7 +247,7 @@ MonoBehaviour:
   emitter: {fileID: 114648518534178814}
   playerGlobal: {fileID: 0}
   playerLocal: {fileID: 0}
-  lerpSpeed: 0.5
+  lerpSpeed: 0.1
   colorName: Green
 --- !u!114 &114770235168374048
 MonoBehaviour:

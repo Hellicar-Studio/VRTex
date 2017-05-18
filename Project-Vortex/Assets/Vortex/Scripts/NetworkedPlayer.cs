@@ -6,7 +6,7 @@ using com.kupio.FlowControl;
 public class NetworkedPlayer : Photon.MonoBehaviour {
 
     public GameObject avatar;
-    public GameObject emitter;
+    public AudioEmitter emitter;
     public Transform playerGlobal;
     public Transform playerLocal;
 
@@ -14,7 +14,7 @@ public class NetworkedPlayer : Photon.MonoBehaviour {
 	void Start () {
         Debug.Log("I'm instantiated!");
 
-        if(photonView.isMine)
+        if (photonView.isMine)
         {
             Debug.Log("Player is Mine");
             playerGlobal = this.transform;
@@ -22,27 +22,41 @@ public class NetworkedPlayer : Photon.MonoBehaviour {
 
             this.transform.SetParent(playerLocal);
 
-            avatar.SetActive(false);
-        }
-        ParticleFlowController flowControl = emitter.GetComponent<ParticleFlowController>();
+            transform.localPosition = new Vector3(0.0f, 0.0f, 0.0f);
+            transform.localRotation = new Quaternion(0.0f, 0.0f, 0.0f, 0.0f);
 
+            avatar.SetActive(false);
+        } else
+        {
+            emitter = GetComponentInChildren<AudioEmitter>();
+            emitter.networked = true;
+        }
+
+        ParticleFlowController flowControl = emitter.GetComponent<ParticleFlowController>();
         flowControl.flowControlRegion = FindObjectOfType<FlowControlRegion>();
+
     }
 
     void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
         if(stream.isWriting)
         {
-            stream.SendNext(playerGlobal.position);
-            stream.SendNext(playerGlobal.rotation);
-            stream.SendNext(playerLocal.localPosition);
-            stream.SendNext(playerLocal.localRotation);
+            Vector3 pos = playerGlobal.position;
+            Debug.Log("Sending Global Position: " + pos);
+            stream.SendNext(pos);
+            Quaternion rot = playerGlobal.rotation;
+            Debug.Log("Sending Global Rotation: " + rot);
+            stream.SendNext(rot);
+            stream.SendNext(emitter.loudness);
         } else
         {
-            this.transform.position = (Vector3)stream.ReceiveNext();
-            this.transform.rotation = (Quaternion)stream.ReceiveNext();
-            avatar.transform.localPosition = (Vector3)stream.ReceiveNext();
-            avatar.transform.localRotation = (Quaternion)stream.ReceiveNext();
+            Vector3 pos = (Vector3)stream.ReceiveNext();
+            Debug.Log("Recieving Global Position: " + pos);
+            this.transform.position = Vector3.Lerp(transform.position, pos, 0.1f);
+            Quaternion rot = (Quaternion)stream.ReceiveNext();
+            Debug.Log("Recieving Global Rotation: " + rot);
+            this.transform.rotation = Quaternion.Lerp(transform.rotation, rot, 0.1f); ;
+            emitter.setLoudness((float)stream.ReceiveNext());
         }
     }
 

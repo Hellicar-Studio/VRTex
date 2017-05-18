@@ -113,8 +113,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1802228984961796}
-  m_LocalRotation: {x: 6.876958e-10, y: -0.467966, z: -0.000000057047572, w: 0.8837465}
-  m_LocalPosition: {x: -0.7, y: 1.42, z: 10.32}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4290338155075164}
@@ -128,13 +128,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1104467072677440}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4950768059549728}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23669310001263710
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -211,7 +211,7 @@ MonoBehaviour:
   onSerializeRigidBodyOption: 2
   ownershipTransfer: 0
   ObservedComponents:
-  - {fileID: 4950768059549728}
+  - {fileID: 114744266627302458}
   ObservedComponentsFoldoutOpen: 1
   viewIdField: 0
   instantiationId: -1
@@ -229,7 +229,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   input: {fileID: 0}
-  particleSystem: {fileID: 198518466114628034}
+  particles: {fileID: 0}
+  loudness: 0
+  networked: 0
 --- !u!114 &114744266627302458
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -241,8 +243,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e05dda646c320a4bad9651b55b0be4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  avatar: {fileID: 0}
-  emitter: {fileID: 1104467072677440}
+  avatar: {fileID: 1728903520352692}
+  emitter: {fileID: 114648518534178814}
   playerGlobal: {fileID: 0}
   playerLocal: {fileID: 0}
 --- !u!114 &114770235168374048

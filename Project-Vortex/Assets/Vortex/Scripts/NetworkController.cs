@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//using com.kupio.FlowControl;
+using com.kupio.FlowControl;
 
 public class NetworkController : MonoBehaviour {
 
@@ -21,9 +21,7 @@ public class NetworkController : MonoBehaviour {
 
     void OnJoinedRoom()
     {
-        GameObject player = PhotonNetwork.Instantiate("NetworkedPlayer", new Vector3(4.5f, 1.5f, -4.0f), new Quaternion(0, -55, 0, 0), 0);
-        //ParticleFlowController flow = player.GetComponentInChildren<ParticleFlowController>();
-        //flow.flowControlRegion = FindObjectOfType<FlowControlRegion>();
+        GameObject player = PhotonNetwork.Instantiate("NetworkedPlayer", new Vector3(0.0f, 0.0f, 0.0f), new Quaternion(0, 0, 0, 0), 0);
     }
 	
 	// Update is called once per frame

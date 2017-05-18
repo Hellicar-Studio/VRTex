@@ -15,9 +15,8 @@ public class NetworkController : MonoBehaviour {
         for(int i = 0; i < rigs.Length; i++)
         {
             string name = rigs[i].gameObject.name;
-            char colOfObject = name[name.Length - 1];
-            char colOfGame = _ColorName[_ColorName.Length - 1];
-            if(colOfObject != colOfGame)
+            string colOfObject = name.Substring(name.Length - _ColorName.Length);
+            if(colOfObject != _ColorName)
             {
                 rigs[i].gameObject.SetActive(false);
             }

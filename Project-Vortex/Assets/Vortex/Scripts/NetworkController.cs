@@ -16,10 +16,10 @@ public class NetworkController : MonoBehaviour {
         {
             string name = rigs[i].gameObject.name;
             string colOfObject = name.Substring(name.Length - _ColorName.Length);
-            if(colOfObject != _ColorName)
-            {
-                rigs[i].gameObject.SetActive(false);
-            }
+            //if(colOfObject != _ColorName)
+            //{
+            //    rigs[i].gameObject.GetComponentInChildren<Camera>().enabled = false;
+            //}
         }
 	}
 
@@ -34,7 +34,7 @@ public class NetworkController : MonoBehaviour {
     void OnJoinedRoom()
     {
         PhotonPlayer[] players = PhotonNetwork.playerList;
-
+        Debug.Log("Someone just joined the room!");
         for(int i = 0; i < players.Length; i++)
         {
             Debug.Log(players[i].UserId);
@@ -43,9 +43,9 @@ public class NetworkController : MonoBehaviour {
 
         GameObject player = PhotonNetwork.Instantiate("NetworkedPlayer" + _ColorName, new Vector3(0.0f, 0.0f, 0.0f), new Quaternion(0, 0, 0, 0), 0);
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update () {
 		
 	}
 }

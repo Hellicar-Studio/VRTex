@@ -113,7 +113,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1802228984961796}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -232,6 +232,9 @@ MonoBehaviour:
   particles: {fileID: 0}
   loudness: 0
   networked: 0
+  autonomous: 0
+  autonomousSpeed: 0.01
+  autonomousAmount: 100
 --- !u!114 &114744266627302458
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -249,6 +252,7 @@ MonoBehaviour:
   playerLocal: {fileID: 0}
   lerpSpeed: 0.1
   colorName: Red
+  rig: {fileID: 114585934933909342, guid: 69495a77b6579c441a148e3efe8d128c, type: 2}
 --- !u!114 &114770235168374048
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -852,13 +856,13 @@ ParticleSystem:
     serializedVersion: 4
     rateOverTime:
       minMaxState: 3
-      scalar: 20
+      scalar: 0
       maxCurve:
         serializedVersion: 2
         m_Curve:
         - serializedVersion: 2
           time: 0
-          value: 1
+          value: 0
           inSlope: 0
           outSlope: 0
           tangentMode: 0

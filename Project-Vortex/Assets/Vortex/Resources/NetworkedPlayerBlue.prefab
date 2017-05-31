@@ -220,6 +220,10 @@ MonoBehaviour:
   particles: {fileID: 0}
   loudness: 0
   networked: 0
+  autonomous: 0
+  autonomousSpeed: 0
+  autonomousAmount: 0
+  autonomousOffset: 0
 --- !u!114 &114497457997808868
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -242,8 +246,8 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 114753617840077624}
   ObservedComponentsFoldoutOpen: 1
-  viewIdField: 0
-  instantiationId: -1
+  viewIdField: 4
+  instantiationId: 4
   currentMasterID: -1
   isRuntimeInstantiated: 0
 --- !u!114 &114753617840077624
@@ -263,6 +267,7 @@ MonoBehaviour:
   playerLocal: {fileID: 0}
   lerpSpeed: 0.1
   colorName: Blue
+  rig: {fileID: 114585934933909342, guid: 69495a77b6579c441a148e3efe8d128c, type: 2}
 --- !u!198 &198433989560034788
 ParticleSystem:
   m_ObjectHideFlags: 1

@@ -71,10 +71,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4950768059549728}
-  - component: {fileID: 114744266627302458}
   - component: {fileID: 114592105786237106}
+  - component: {fileID: 114523145592546244}
   m_Layer: 0
-  m_Name: NetworkedPlayerGreen
+  m_Name: DummyPlayerGreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -105,7 +105,7 @@ Transform:
   m_Children:
   - {fileID: 4101106382747136}
   m_Father: {fileID: 4950768059549728}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4950768059549728
 Transform:
@@ -117,8 +117,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.4589949, y: 1.458995, z: 1.4589953}
   m_Children:
-  - {fileID: 4966300877519652}
   - {fileID: 4868711134020068}
+  - {fileID: 4966300877519652}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -129,11 +129,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1104467072677440}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4950768059549728}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23531592179036992
 MeshRenderer:
@@ -191,6 +191,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114523145592546244
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1802228984961796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 889085d89d0d2294bb9468b70910629f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  noiseOffset: 0
 --- !u!114 &114592105786237106
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -211,10 +224,10 @@ MonoBehaviour:
   onSerializeRigidBodyOption: 2
   ownershipTransfer: 0
   ObservedComponents:
-  - {fileID: 114744266627302458}
+  - {fileID: 0}
   ObservedComponentsFoldoutOpen: 1
-  viewIdField: 0
-  instantiationId: -1
+  viewIdField: 3
+  instantiationId: 3
   currentMasterID: -1
   isRuntimeInstantiated: 0
 --- !u!114 &114648518534178814
@@ -232,27 +245,10 @@ MonoBehaviour:
   particles: {fileID: 0}
   loudness: 0
   networked: 0
-  autonomous: 0
+  autonomous: 1
   autonomousSpeed: 0.01
   autonomousAmount: 1000
---- !u!114 &114744266627302458
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1802228984961796}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e05dda646c320a4bad9651b55b0be4f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  avatar: {fileID: 1202642878179206}
-  emitter: {fileID: 114648518534178814}
-  playerGlobal: {fileID: 0}
-  playerLocal: {fileID: 0}
-  lerpSpeed: 0.1
-  colorName: Green
-  rig: {fileID: 114585934933909342, guid: 69495a77b6579c441a148e3efe8d128c, type: 2}
+  autonomousOffset: 500
 --- !u!114 &114770235168374048
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -322,7 +318,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1960524126
+  randomSeed: 1355164423
   InitialModule:
     serializedVersion: 3
     enabled: 1

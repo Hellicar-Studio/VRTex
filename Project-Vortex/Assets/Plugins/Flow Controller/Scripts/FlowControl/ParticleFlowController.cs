@@ -27,7 +27,7 @@ namespace com.kupio.FlowControl
             if (particles == null)
             {
                 particleSys = GetComponent<ParticleSystem>();
-                particles = new ParticleSystem.Particle[particleSys.maxParticles];
+                particles = new ParticleSystem.Particle[particleSys.main.maxParticles];
             }
 
             int numParticles = particleSys.GetParticles(this.particles);

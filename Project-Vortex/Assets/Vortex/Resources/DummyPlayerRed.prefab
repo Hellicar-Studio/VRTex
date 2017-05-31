@@ -213,8 +213,8 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 0}
   ObservedComponentsFoldoutOpen: 1
-  viewIdField: 2
-  instantiationId: 2
+  viewIdField: 0
+  instantiationId: -1
   currentMasterID: -1
   isRuntimeInstantiated: 0
 --- !u!114 &114648518534178814
@@ -249,6 +249,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   noiseOffset: 600
+  noiseMagnitude: 0
+  val: 0
 --- !u!114 &114770235168374048
 MonoBehaviour:
   m_ObjectHideFlags: 1

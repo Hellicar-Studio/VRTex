@@ -906,7 +906,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _room: Test_Room
-  _ColorName: Red
+  _ColorName: Blue
 --- !u!4 &203807415
 Transform:
   m_ObjectHideFlags: 0
@@ -4758,6 +4758,18 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4290338155075164, guid: b8b280dd5b05ce949ae134eb41d0f30a, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4290338155075164, guid: b8b280dd5b05ce949ae134eb41d0f30a, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4290338155075164, guid: b8b280dd5b05ce949ae134eb41d0f30a, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b8b280dd5b05ce949ae134eb41d0f30a, type: 2}
   m_IsPrefabParent: 0
@@ -6328,6 +6340,18 @@ Prefab:
     - target: {fileID: 4002523777076296, guid: 07d23b4c448b1e243b8737b419f42877, type: 2}
       propertyPath: m_LocalPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213671176243038, guid: 07d23b4c448b1e243b8737b419f42877, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213671176243038, guid: 07d23b4c448b1e243b8737b419f42877, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213671176243038, guid: 07d23b4c448b1e243b8737b419f42877, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 07d23b4c448b1e243b8737b419f42877, type: 2}
@@ -13776,6 +13800,18 @@ Prefab:
         type: 2}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4868711134020068, guid: 602e4adadf20ae44f8c5a1567c8c4413, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4868711134020068, guid: 602e4adadf20ae44f8c5a1567c8c4413, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4868711134020068, guid: 602e4adadf20ae44f8c5a1567c8c4413, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 602e4adadf20ae44f8c5a1567c8c4413, type: 2}

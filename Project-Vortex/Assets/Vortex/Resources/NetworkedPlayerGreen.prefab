@@ -235,6 +235,7 @@ MonoBehaviour:
   autonomous: 0
   autonomousSpeed: 0.01
   autonomousAmount: 1000
+  autonomousOffset: 0
 --- !u!114 &114744266627302458
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -250,7 +251,7 @@ MonoBehaviour:
   emitter: {fileID: 114648518534178814}
   playerGlobal: {fileID: 0}
   playerLocal: {fileID: 0}
-  lerpSpeed: 0.1
+  lerpSpeed: 0.05
   colorName: Green
   rig: {fileID: 114585934933909342, guid: 69495a77b6579c441a148e3efe8d128c, type: 2}
 --- !u!114 &114770235168374048

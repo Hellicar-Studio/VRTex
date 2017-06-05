@@ -338,6 +338,7 @@
     <Compile Include="Assets\Vortex\Scripts\CameraRigControllerY.cs" />
     <Compile Include="Assets\Vortex\Scripts\FlowRegionSpeedController.cs" />
     <Compile Include="Assets\Vortex\Scripts\FlowRegionYController.cs" />
+    <Compile Include="Assets\Vortex\Scripts\FreeFlyCamera.cs" />
     <Compile Include="Assets\Vortex\Scripts\GameController.cs" />
     <Compile Include="Assets\Vortex\Scripts\HeadWobbler.cs" />
     <Compile Include="Assets\Vortex\Scripts\LightingController.cs" />

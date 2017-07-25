@@ -476,6 +476,7 @@ MonoBehaviour:
   autonomous: 0
   autonomousSpeed: 0
   autonomousAmount: 0
+  autonomousOffset: 0
 --- !u!114 &114585934933909342
 MonoBehaviour:
   m_ObjectHideFlags: 1

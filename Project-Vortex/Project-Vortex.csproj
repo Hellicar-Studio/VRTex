@@ -451,6 +451,7 @@
     <None Include="Assets\VRSampleScenes\Shaders\SlidingUV.shader" />
     <None Include="Assets\VRSampleScenes\Shaders\UIOverlay.shader" />
     <None Include="Assets\VRSampleScenes\Shaders\UnlitTransparentParam.shader" />
+    <None Include="Assets\Vortex\Shaders\ItemGlow.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

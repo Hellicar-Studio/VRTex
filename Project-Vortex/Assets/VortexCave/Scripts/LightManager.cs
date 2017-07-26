@@ -5,7 +5,7 @@ using UnityEngine;
 public class LightManager : MonoBehaviour {
 
     public GameObject[] lights;
-    public Material mat;
+    public Material[] mat;
     public Material[] lightMats;
     public Color col;
 	// Use this for initialization
@@ -34,7 +34,11 @@ public class LightManager : MonoBehaviour {
         {
             lightColors[i] = lightMats[i].GetColor("_RimColor");
         }
-        mat.SetVectorArray("_LightPos", lightPositions);
-        mat.SetVectorArray("_LightCol", lightColors);
+        for(int i = 0; i < mat.Length; i++)
+        {
+            mat[i].SetVectorArray("_LightPos", lightPositions);
+            mat[i].SetVectorArray("_LightCol", lightColors);
+        }
+
 	}
 }

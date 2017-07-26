@@ -1,14 +1,13 @@
-﻿Shader "Custom/MultiLight"
+﻿Shader "Custom/NormalDebugger"
 {
 	Properties
 	{
-		_MainTex ("Texture", 2D) = "white" {}
+		_MainTex("Texture", 2D) = "white" {}
 		_Shininess("Shininess", Range(0.0, 1.0)) = 0.0
-		_Attenuation("Attenuation", Range(0.001, 20.0)) = 1.0
 	}
 	SubShader
 	{
-		Tags { "RenderType" = "Opaque" }
+		Tags{ "RenderType" = "Opaque" }
 
 		Pass
 		{
@@ -40,9 +39,8 @@
 			uniform float _Shininess;
 			uniform float3 _LightPos[20];
 			uniform float3 _LightCol[20];
-			uniform float _Attenuation;
-			
-			v2f vert (appdata v)
+
+			v2f vert(appdata v)
 			{
 				v2f o;
 				o.vertex = UnityObjectToClipPos(v.vertex);
@@ -51,8 +49,8 @@
 				o.worldPos = mul(unity_ObjectToWorld, v.vertex);
 				return o;
 			}
-			
-			fixed4 frag (v2f i) : SV_Target
+
+			fixed4 frag(v2f i) : SV_Target
 			{
 				// sample the texture
 				fixed4 col = tex2D(_MainTex, i.uv);
@@ -64,18 +62,15 @@
 				float3 diffuse = float3(0.0, 0.0, 0.0);
 				float3 specular = float3(0.0, 0.0, 0.0);
 
-				for (int i = 0; i < 10; i++) {
-					float3 lPos = _LightPos[i].xyz;
-					float3 surf2light = normalize(lPos - pos);
-					float dcont = max(0.0, dot(norm, surf2light));
-					float3 reflection = reflect(-surf2light, norm);
-					float scont = pow(max(0.0, dot(surf2view, reflection)), _Shininess);
-					float att = 1.0 / (1.0 + _Attenuation*distance(lPos, pos));
-					diffuse += dcont*col.rgb*_LightCol[i] * att;
-					//specular += scont*float3(1.0, 1.0, 1.0);
-				}
+				float3 lPos = _LightPos[0];
+				float3 surf2light = normalize(lPos - pos);
+				float dcont = max(0.0, dot(norm, surf2light));
+				float3 reflection = reflect(-surf2light, norm);
+				float scont = pow(max(0.0, dot(surf2view, reflection)), _Shininess);
+				float att = 1.0 / (1.0 + 1.0*distance(lPos, pos));
+				diffuse += dcont * float3(1.0, 1.0, 1.0) * att;
 
-				float3 v = diffuse;
+				float3 v = diffuse;// normalize(_LightPos[0]);
 
 				return float4(v.r, v.g, v.b, 1.0);
 			}

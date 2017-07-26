@@ -331,22 +331,22 @@
     <Compile Include="Assets\VRStandardAssets\Scripts\VRInput.cs" />
     <Compile Include="Assets\VRStandardAssets\Scripts\VRInteractiveItem.cs" />
     <Compile Include="Assets\VRStandardAssets\Scripts\VRTrackingReset.cs" />
-    <Compile Include="Assets\Vortex\Scripts\AudioButtonOverride.cs" />
-    <Compile Include="Assets\Vortex\Scripts\AudioEmitter.cs" />
-    <Compile Include="Assets\Vortex\Scripts\AudioInput.cs" />
-    <Compile Include="Assets\Vortex\Scripts\AudioSourceController.cs" />
-    <Compile Include="Assets\Vortex\Scripts\CameraRigControllerY.cs" />
-    <Compile Include="Assets\Vortex\Scripts\FlowRegionSpeedController.cs" />
-    <Compile Include="Assets\Vortex\Scripts\FlowRegionYController.cs" />
-    <Compile Include="Assets\Vortex\Scripts\FreeFlyCamera.cs" />
-    <Compile Include="Assets\Vortex\Scripts\GameController.cs" />
-    <Compile Include="Assets\Vortex\Scripts\HeadWobbler.cs" />
-    <Compile Include="Assets\Vortex\Scripts\LightManager.cs" />
-    <Compile Include="Assets\Vortex\Scripts\LightingController.cs" />
-    <Compile Include="Assets\Vortex\Scripts\NetworkController.cs" />
-    <Compile Include="Assets\Vortex\Scripts\NetworkedPlayer.cs" />
-    <Compile Include="Assets\Vortex\Scripts\RandomEmitter.cs" />
-    <Compile Include="Assets\Vortex\Scripts\ValueSetter.cs" />
+    <Compile Include="Assets\VortexCave\Scripts\AudioButtonOverride.cs" />
+    <Compile Include="Assets\VortexCave\Scripts\AudioEmitter.cs" />
+    <Compile Include="Assets\VortexCave\Scripts\AudioInput.cs" />
+    <Compile Include="Assets\VortexCave\Scripts\AudioSourceController.cs" />
+    <Compile Include="Assets\VortexCave\Scripts\CameraRigControllerY.cs" />
+    <Compile Include="Assets\VortexCave\Scripts\FlowRegionSpeedController.cs" />
+    <Compile Include="Assets\VortexCave\Scripts\FlowRegionYController.cs" />
+    <Compile Include="Assets\VortexCave\Scripts\FreeFlyCamera.cs" />
+    <Compile Include="Assets\VortexCave\Scripts\GameController.cs" />
+    <Compile Include="Assets\VortexCave\Scripts\HeadWobbler.cs" />
+    <Compile Include="Assets\VortexCave\Scripts\LightManager.cs" />
+    <Compile Include="Assets\VortexCave\Scripts\LightingController.cs" />
+    <Compile Include="Assets\VortexCave\Scripts\NetworkController.cs" />
+    <Compile Include="Assets\VortexCave\Scripts\NetworkedPlayer.cs" />
+    <Compile Include="Assets\VortexCave\Scripts\RandomEmitter.cs" />
+    <Compile Include="Assets\VortexCave\Scripts\ValueSetter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\OVR\Moonlight\Resources\Unlit Transparent Color.shader" />
@@ -452,9 +452,9 @@
     <None Include="Assets\VRSampleScenes\Shaders\SlidingUV.shader" />
     <None Include="Assets\VRSampleScenes\Shaders\UIOverlay.shader" />
     <None Include="Assets\VRSampleScenes\Shaders\UnlitTransparentParam.shader" />
-    <None Include="Assets\Vortex\Shaders\ItemGlow.shader" />
-    <None Include="Assets\Vortex\Shaders\LightReflector.shader" />
-    <None Include="Assets\Vortex\Shaders\MultiLight.shader" />
+    <None Include="Assets\VortexGlow\Shaders\ItemGlow.shader" />
+    <None Include="Assets\VortexGlow\Shaders\LightReflector.shader" />
+    <None Include="Assets\VortexGlow\Shaders\MultiLight.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

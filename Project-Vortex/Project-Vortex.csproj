@@ -347,6 +347,8 @@
     <Compile Include="Assets\VortexCave\Scripts\NetworkedPlayer.cs" />
     <Compile Include="Assets\VortexCave\Scripts\RandomEmitter.cs" />
     <Compile Include="Assets\VortexCave\Scripts\ValueSetter.cs" />
+    <Compile Include="Assets\VortexGlow\Scripts\LightBullet.cs" />
+    <Compile Include="Assets\VortexGlow\Scripts\LightGun.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\OVR\Moonlight\Resources\Unlit Transparent Color.shader" />

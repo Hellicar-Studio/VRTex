@@ -38,8 +38,8 @@
 			sampler2D _MainTex;
 			float4 _MainTex_ST;
 			uniform float _Shininess;
-			uniform float3 _LightPos[20];
-			uniform float3 _LightCol[20];
+			uniform float3 _LightPos[5];
+			uniform float3 _LightCol[5];
 			uniform float _Attenuation;
 			
 			v2f vert (appdata v)
@@ -64,7 +64,7 @@
 				float3 diffuse = float3(0.0, 0.0, 0.0);
 				float3 specular = float3(0.0, 0.0, 0.0);
 
-				for (int i = 0; i < 10; i++) {
+				for (int i = 0; i < 5; i++) {
 					float3 lPos = _LightPos[i].xyz;
 					float3 surf2light = normalize(lPos - pos);
 					float dcont = max(0.0, dot(norm, surf2light));

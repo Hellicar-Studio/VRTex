@@ -169,6 +169,7 @@ GameObject:
   - component: {fileID: 114301379951176456}
   - component: {fileID: 114131917796111042}
   - component: {fileID: 114037845905568804}
+  - component: {fileID: 114398338679992858}
   m_Layer: 0
   m_Name: VRTexCameraRig
   m_TagString: Untagged
@@ -450,7 +451,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1551384317273532}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4975a6e437fc3b149a8cd508ce5bdd69, type: 3}
   m_Name: 
@@ -476,6 +477,19 @@ MonoBehaviour:
   _trackingOriginType: 0
   usePositionTracking: 1
   resetTrackerOnLoad: 0
+--- !u!114 &114398338679992858
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1907648329282438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ba8a89edd6a4d8428dce7bc8f7cc16e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  l: {fileID: 0}
+  lightManager: {fileID: 0}
 --- !u!114 &114506197460711262
 MonoBehaviour:
   m_ObjectHideFlags: 1

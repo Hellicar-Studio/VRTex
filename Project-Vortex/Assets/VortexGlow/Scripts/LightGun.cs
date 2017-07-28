@@ -12,6 +12,7 @@ public class LightGun : MonoBehaviour {
     private List<Coroutine> activeRoutines;
 
     public float maxRange;
+    public float speed = 0.01f;
 
 	// Use this for initialization
 	void Start () {
@@ -83,7 +84,7 @@ public class LightGun : MonoBehaviour {
         float dist = Vector3.Distance(pos, t.position);
         while (dist < maxRange)
         {
-            pos = Vector3.Lerp(pos, pos + forward * maxRange, 0.01f);
+            pos = Vector3.Lerp(pos, pos + forward * maxRange, speed);
             bulletLight.transform.position = pos;
             dist = Vector3.Distance(pos, t.position);
             yield return null;

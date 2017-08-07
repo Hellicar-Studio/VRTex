@@ -6,14 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Vortex/Vortex-Menu_01.unity
+    path: Assets/VortexCave/Vortex-Menu_01.unity
     guid: 5c25636bfd8ff4840b987eb4635352e7
   - enabled: 0
-    path: Assets/Vortex/Vortex_01.unity
+    path: Assets/VortexCave/Vortex_01.unity
     guid: d88ae9524f3c1d843acc3863e4ea7b8c
   - enabled: 0
-    path: Assets/Vortex/Vortex-Outro_01.unity
+    path: Assets/VortexCave/Vortex-Outro_01.unity
     guid: 6903244df568ebc4283f845407348d3b
-  - enabled: 1
-    path: Assets/Vortex/Glowtex.unity
+  - enabled: 0
+    path: Assets/VortexGlow/Glowtex.unity
     guid: 1b9a1ddbfe1b2744cb3d4ce5814ae809
+  - enabled: 1
+    path: Assets/VortexGlow/Master.unity
+    guid: 1b2ca4c88aa7a784e85b86a01bf05c43

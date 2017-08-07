@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LightGun : MonoBehaviour {
+public class LightGun : MonoBehaviour
+{
     public GameObject bullet;
     private Transform t;
     private Rigidbody bulletBody;
@@ -14,8 +15,11 @@ public class LightGun : MonoBehaviour {
     public float maxRange;
     public float speed = 0.01f;
 
-	// Use this for initialization
-	void Start () {
+    [SerializeField] private VRStandardAssets.Utils.VRInput m_VRInput;
+
+    // Use this for initialization
+    void Start()
+    {
         t = this.transform;
         bullet = Instantiate(bullet, t);
         bullet.transform.parent = t.parent;
@@ -27,10 +31,23 @@ public class LightGun : MonoBehaviour {
 
         bulletBody.interpolation = RigidbodyInterpolation.Interpolate;
     }
-	
-	// Update is called once per frame
-	void Update () {
-        if(Input.GetKeyUp("space"))
+
+    private void OnEnable()
+    {
+        Debug.Log("Enabled! in Light Gun!");
+        m_VRInput.OnClick += fireLight;
+    }
+
+    private void OnDisable()
+    {
+        Debug.Log("Disabled! in Light Gun!");
+        m_VRInput.OnClick -= fireLight;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKeyUp("space"))
         {
             fireLight();
         }
@@ -38,16 +55,16 @@ public class LightGun : MonoBehaviour {
 
     void fireLight()
     {
-        for(int i = 0; i < activeRoutines.Count; i++)
+        for (int i = 0; i < activeRoutines.Count; i++)
         {
-            if(activeRoutines[i] != null)
+            if (activeRoutines[i] != null)
             {
                 StopCoroutine(activeRoutines[i]);
             }
         }
         activeRoutines.Clear();
         bullet.transform.localPosition = new Vector3(0.0f, 0.0f, 0.0f);
-        if(orbMat != null)
+        if (orbMat != null)
         {
             activeRoutines.Add(StartCoroutine(FadeOrb(new Color(1.0f, 1.0f, 1.0f))));
         }
@@ -58,7 +75,7 @@ public class LightGun : MonoBehaviour {
     IEnumerator FadeOrb(Color target)
     {
         Color col = orbMat.GetColor("_RimColor");
-        while(col != target)
+        while (col != target)
         {
             col = Color.Lerp(col, target, 0.1f);
             orbMat.SetColor("_RimColor", col);

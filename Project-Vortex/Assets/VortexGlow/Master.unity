@@ -765,6 +765,16 @@ Prefab:
       propertyPath: speed
       value: 0.005
       objectReference: {fileID: 0}
+    - target: {fileID: 114398338679992858, guid: deefa3d2824fa0f4b8c766f4c0c3fd97,
+        type: 2}
+      propertyPath: m_VRInput
+      value: 
+      objectReference: {fileID: 716064333}
+    - target: {fileID: 114398338679992858, guid: deefa3d2824fa0f4b8c766f4c0c3fd97,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: deefa3d2824fa0f4b8c766f4c0c3fd97, type: 2}
   m_IsPrefabParent: 0
@@ -1234,6 +1244,24 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1270265161}
   m_GameObject: {fileID: 702723188}
   m_Mesh: {fileID: 4300000, guid: 8539a27d888a245f4aa0a56db229c311, type: 3}
+--- !u!1 &716064332 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1907648329282438, guid: deefa3d2824fa0f4b8c766f4c0c3fd97,
+    type: 2}
+  m_PrefabInternal: {fileID: 407236832}
+--- !u!114 &716064333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 716064332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8902ef04f323e444b98d2e4fd80a56ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_DoubleClickTime: 0.3
+  m_SwipeWidth: 0.3
 --- !u!1001 &759537303
 Prefab:
   m_ObjectHideFlags: 0
@@ -2642,6 +2670,26 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400004, guid: 73fc3e989698e404f95394804e863209, type: 3}
   m_PrefabInternal: {fileID: 666171026}
+--- !u!1 &1488529754 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1551384317273532, guid: deefa3d2824fa0f4b8c766f4c0c3fd97,
+    type: 2}
+  m_PrefabInternal: {fileID: 407236832}
+--- !u!114 &1488529760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1488529754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ba8a89edd6a4d8428dce7bc8f7cc16e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 1879881247165090, guid: e05cd39412161ad488be857008f20c69, type: 2}
+  maxRange: 100
+  speed: 0.005
+  m_VRInput: {fileID: 716064333}
 --- !u!1001 &1514751937
 Prefab:
   m_ObjectHideFlags: 0

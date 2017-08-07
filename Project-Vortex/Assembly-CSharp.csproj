@@ -319,6 +319,8 @@
      <Compile Include="Assets\VortexCave\Scripts\NetworkedPlayer.cs" />
      <Compile Include="Assets\VortexCave\Scripts\RandomEmitter.cs" />
      <Compile Include="Assets\VortexCave\Scripts\ValueSetter.cs" />
+     <Compile Include="Assets\VortexGlow\Scripts\LightBullet.cs" />
+     <Compile Include="Assets\VortexGlow\Scripts\LightGun.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />
@@ -334,7 +336,7 @@
      <None Include="Assets\Photon Unity Networking\link.xml" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\NFAA.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ScreenSpaceRaytrace.cginc" />
-     <None Include="Assets\VortexGlow\Shaders\LightReflector.shader" />
+     <None Include="Assets\VortexGlow\Shaders\NormalDebugger.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\TiltShiftHdrLensBlur.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\VignetteShader.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\DepthOfFieldScatter.shader" />

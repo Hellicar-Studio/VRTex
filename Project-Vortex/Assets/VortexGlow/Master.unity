@@ -775,7 +775,8 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114398338679992858, guid: deefa3d2824fa0f4b8c766f4c0c3fd97, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: deefa3d2824fa0f4b8c766f4c0c3fd97, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &435930840 stripped
@@ -2687,6 +2688,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 1879881247165090, guid: e05cd39412161ad488be857008f20c69, type: 2}
+  audioInput: {fileID: 231908880}
+  cooldown: 2
   maxRange: 100
   speed: 0.005
   m_VRInput: {fileID: 716064333}

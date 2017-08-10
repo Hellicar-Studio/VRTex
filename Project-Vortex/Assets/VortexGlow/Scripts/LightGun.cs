@@ -10,6 +10,9 @@ public class LightGun : MonoBehaviour
     private Light bulletLight;
     private Material orbMat;
     public AudioInput audioInput;
+    public int cooldown;
+
+    private float lastFireTime;
 
     private List<Coroutine> activeRoutines;
 
@@ -48,9 +51,16 @@ public class LightGun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyUp("space"))
+        if (Time.time - lastFireTime > cooldown)
         {
-            fireLight();
+            if (Input.GetKeyUp("space"))
+            {
+                fireLight();
+            }
+            if (audioInput.MicLoudness > 800)
+            {
+                fireLight();
+            }
         }
     }
 
@@ -71,6 +81,8 @@ public class LightGun : MonoBehaviour
         }
         activeRoutines.Add(StartCoroutine(FadeLight(50.0f)));
         activeRoutines.Add(StartCoroutine(MoveForward(t.forward)));
+
+        lastFireTime = Time.time;
     }
 
     IEnumerator FadeOrb(Color target)

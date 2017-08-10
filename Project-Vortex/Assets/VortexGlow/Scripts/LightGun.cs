@@ -74,7 +74,6 @@ public class LightGun : MonoBehaviour
             }
         }
         activeRoutines.Clear();
-        bullet.transform.localPosition = new Vector3(0.0f, 0.0f, 0.0f);
         if (orbMat != null)
         {
             activeRoutines.Add(StartCoroutine(FadeOrb(new Color(1.0f, 1.0f, 1.0f))));
@@ -109,7 +108,7 @@ public class LightGun : MonoBehaviour
 
     IEnumerator MoveForward(Vector3 forward)
     {
-        bullet.transform.localPosition = new Vector3(0.0f, 0.0f, 0.0f);
+        bullet.transform.localPosition = new Vector3(0.0f, -0.5f, 0.0f);
         Vector3 pos = bullet.transform.position;
         float dist = Vector3.Distance(pos, t.position);
         while (dist < maxRange)

@@ -22,6 +22,10 @@ public class AudioInput : MonoBehaviour
     public Frequency samplingRate = Frequency.Wideband;
     public int lengthSeconds = 1;
 
+    private float[] micHistory;
+    public int historyLength = 60;
+    public bool pulse = false;
+
     private string _device;
 
     //mic initialization
@@ -30,6 +34,11 @@ public class AudioInput : MonoBehaviour
         if (_device == null && Microphone.devices.Length > 0)
             _device = Microphone.devices[0];
         _clipRecord = Microphone.Start(_device, true, lengthSeconds, (int)samplingRate);
+        micHistory = new float[historyLength];
+        for(int i = 0; i < historyLength; i++)
+        {
+            micHistory[i] = 0;
+        }
     }
 
     void StopMicrophone()
@@ -77,7 +86,23 @@ public class AudioInput : MonoBehaviour
         if(Active)
         {
             MicLoudness = LevelMax() * 1000f;
+            float avgMicLoudness = 0;
+            for(int i = historyLength-1; i > 0; i--)
+            {
+                micHistory[i] = micHistory[i - 1];
+                avgMicLoudness += micHistory[i];
+            }
+            micHistory[0] = MicLoudness;
+            avgMicLoudness /= historyLength;
+            if(MicLoudness > avgMicLoudness * 2 + 10)
+            {
+                pulse = true;
+            } else
+            {
+                pulse = false;
+            }
         }
+
     }
 
     bool _isInitialized;

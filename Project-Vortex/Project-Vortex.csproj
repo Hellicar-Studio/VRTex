@@ -365,6 +365,7 @@
     <Compile Include="Assets\VortexCave\Scripts\ValueSetter.cs" />
     <Compile Include="Assets\VortexGlow\Scripts\LightBullet.cs" />
     <Compile Include="Assets\VortexGlow\Scripts\LightGun.cs" />
+    <Compile Include="Assets\VortexGlow\Scripts\SoundObject.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\OVR\Moonlight\Resources\Unlit Transparent Color.shader" />

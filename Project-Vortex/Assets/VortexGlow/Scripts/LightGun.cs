@@ -9,6 +9,7 @@ public class LightGun : MonoBehaviour
     private Rigidbody bulletBody;
     private Light bulletLight;
     private Material orbMat;
+    public AudioInput audioInput;
 
     private List<Coroutine> activeRoutines;
 

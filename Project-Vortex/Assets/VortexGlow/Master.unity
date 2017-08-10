@@ -1940,7 +1940,7 @@ GameObject:
   m_Component:
   - component: {fileID: 926222482}
   m_Layer: 0
-  m_Name: SoundObjects
+  m_Name: SoundReactiveObjects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

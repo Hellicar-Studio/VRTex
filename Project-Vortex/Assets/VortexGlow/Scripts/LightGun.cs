@@ -10,7 +10,7 @@ public class LightGun : MonoBehaviour
     private Light bulletLight;
     private Material orbMat;
     public AudioInput audioInput;
-    public int cooldown;
+    public float cooldown;
 
     private float lastFireTime;
 
@@ -57,7 +57,7 @@ public class LightGun : MonoBehaviour
             {
                 fireLight();
             }
-            if (audioInput.MicLoudness > 800)
+            if (audioInput.pulse)
             {
                 fireLight();
             }

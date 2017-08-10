@@ -516,6 +516,8 @@ MonoBehaviour:
   Active: 0
   samplingRate: 8000
   lengthSeconds: 1
+  historyLength: 120
+  pulse: 0
 --- !u!4 &231908881
 Transform:
   m_ObjectHideFlags: 0
@@ -2689,7 +2691,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 1879881247165090, guid: e05cd39412161ad488be857008f20c69, type: 2}
   audioInput: {fileID: 231908880}
-  cooldown: 2
+  cooldown: 0.5
   maxRange: 100
   speed: 0.005
   m_VRInput: {fileID: 716064333}

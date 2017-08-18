@@ -1,0 +1,184 @@
+fileFormatVersion: 2
+guid: 85041dc5f9e014a9e8225bcf74979599
+timeCreated: 1502204682
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Camera
+    100004: Cap_1
+    100006: Cap_1_2
+    100008: Cap_1_3
+    100010: Cap_1_4
+    100012: Cap_1_5
+    100014: Cap_2
+    100016: Cap_2_2
+    100018: Cap_2_3
+    100020: Cap_2_4
+    100022: Cap_2_5
+    100024: Cylinder
+    100026: Extrude
+    100028: Extrude_1
+    100030: Extrude_2
+    100032: Extrude_3
+    100034: Extrude_4
+    100036: Null
+    100038: Sphere
+    100040: Sphere_1
+    100042: Torus
+    100044: Torus_1
+    400000: //RootNode
+    400002: Camera
+    400004: Cap_1
+    400006: Cap_1_2
+    400008: Cap_1_3
+    400010: Cap_1_4
+    400012: Cap_1_5
+    400014: Cap_2
+    400016: Cap_2_2
+    400018: Cap_2_3
+    400020: Cap_2_4
+    400022: Cap_2_5
+    400024: Cylinder
+    400026: Extrude
+    400028: Extrude_1
+    400030: Extrude_2
+    400032: Extrude_3
+    400034: Extrude_4
+    400036: Null
+    400038: Sphere
+    400040: Sphere_1
+    400042: Torus
+    400044: Torus_1
+    2300000: Cap_1
+    2300002: Cap_1_2
+    2300004: Cap_1_3
+    2300006: Cap_1_4
+    2300008: Cap_1_5
+    2300010: Cap_2
+    2300012: Cap_2_2
+    2300014: Cap_2_3
+    2300016: Cap_2_4
+    2300018: Cap_2_5
+    2300020: Cylinder
+    2300022: Extrude
+    2300024: Extrude_1
+    2300026: Extrude_2
+    2300028: Extrude_3
+    2300030: Extrude_4
+    2300032: Sphere
+    2300034: Sphere_1
+    2300036: Torus
+    2300038: Torus_1
+    3300000: Cap_1
+    3300002: Cap_1_2
+    3300004: Cap_1_3
+    3300006: Cap_1_4
+    3300008: Cap_1_5
+    3300010: Cap_2
+    3300012: Cap_2_2
+    3300014: Cap_2_3
+    3300016: Cap_2_4
+    3300018: Cap_2_5
+    3300020: Cylinder
+    3300022: Extrude
+    3300024: Extrude_1
+    3300026: Extrude_2
+    3300028: Extrude_3
+    3300030: Extrude_4
+    3300032: Sphere
+    3300034: Sphere_1
+    3300036: Torus
+    3300038: Torus_1
+    4300000: Sphere_1
+    4300002: Sphere
+    4300004: Cylinder
+    4300006: Extrude_4
+    4300008: Cap_1
+    4300010: Cap_2
+    4300012: Extrude_3
+    4300014: Cap_1_2
+    4300016: Cap_2_2
+    4300018: Extrude_2
+    4300020: Cap_1_3
+    4300022: Cap_2_3
+    4300024: Extrude_1
+    4300026: Cap_1_4
+    4300028: Cap_2_4
+    4300030: Extrude
+    4300032: Cap_1_5
+    4300034: Cap_2_5
+    4300036: Torus_1
+    4300038: Torus
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

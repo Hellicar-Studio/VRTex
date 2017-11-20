@@ -26,7 +26,7 @@ public class LightGun : MonoBehaviour
     {
         t = this.transform;
         bullet = Instantiate(bullet, t);
-        bullet.transform.parent = t.parent;
+        bullet.transform.parent = t.parent.parent;
         bulletBody = bullet.GetComponent<Rigidbody>();
         bulletLight = bullet.GetComponent<Light>();
         //orbMat = bullet.GetComponentInChildren<MeshRenderer>().material;
@@ -57,32 +57,39 @@ public class LightGun : MonoBehaviour
             {
                 fireLight();
             }
-            if (audioInput.pulse)
+            if (audioInput.MicLoudness > )
             {
                 fireLight();
             }
         }
     }
 
-    void fireLight()
-    {
-        for (int i = 0; i < activeRoutines.Count; i++)
-        {
-            if (activeRoutines[i] != null)
-            {
-                StopCoroutine(activeRoutines[i]);
-            }
-        }
-        activeRoutines.Clear();
-        if (orbMat != null)
-        {
-            activeRoutines.Add(StartCoroutine(FadeOrb(new Color(1.0f, 1.0f, 1.0f))));
-        }
-        activeRoutines.Add(StartCoroutine(FadeLight(50.0f)));
-        activeRoutines.Add(StartCoroutine(MoveForward(t.forward)));
+	void fireLight()
+	{
+		bulletLight.range += 5;
+		if (bulletLight.range > maxRange)
+			bulletLight.range = maxRange;
+	}
 
-        lastFireTime = Time.time;
-    }
+    //void fireLight()
+    //{
+    //    for (int i = 0; i < activeRoutines.Count; i++)
+    //    {
+    //        if (activeRoutines[i] != null)
+    //        {
+    //            StopCoroutine(activeRoutines[i]);
+    //        }
+    //    }
+    //    activeRoutines.Clear();
+    //    if (orbMat != null)
+    //    {
+    //        activeRoutines.Add(StartCoroutine(FadeOrb(new Color(1.0f, 1.0f, 1.0f))));
+    //    }
+    //    activeRoutines.Add(StartCoroutine(FadeLight(50.0f)));
+    //    activeRoutines.Add(StartCoroutine(MoveForward(t.forward)));
+
+    //    lastFireTime = Time.time;
+    //}
 
     IEnumerator FadeOrb(Color target)
     {

@@ -11,6 +11,7 @@ public class GameController : MonoBehaviour {
     public float percentage;
 
     public float progressRate = 0.1f;
+	public float passiveProgressRate = 0.0f;
     public float regressRate = 0.001f;
 
     public float progressLevel = 100;
@@ -56,6 +57,10 @@ public class GameController : MonoBehaviour {
         //    //end!
         //    percentage = 0.1f;
         }
+		if(passiveProgressRate > 0)
+		{
+			percentage += passiveProgressRate;
+		}
 
     }
 }
